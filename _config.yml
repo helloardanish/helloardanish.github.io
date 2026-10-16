@@ -1,8 +1,26 @@
 title: A R Danish
-description: A R Danish portfolio!
+description: Senior Software Engineer | Java · Spring Boot · Microservices
 theme: just-the-docs
 
 url: https://helloardanish.github.io
+baseurl: ""            # keep empty for a user site (helloardanish.github.io)
 
+# Search & navigation
+search_enabled: true
+heading_anchors: true
+color_scheme: light    # try: dark
+
+# Top-right links (replaces the template repository link)
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  GitHub: https://github.com/helloardanish
+  LinkedIn: https://linkedin.com/in/helloardanish
+aux_links_new_tab: true
+
+footer_content: "&copy; 2026 A R Danish. Built with Just the Docs."
+
+# Optional: "Edit this page" link on every page
+gh_edit_link: true
+# gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/helloardanish/helloardanish.github.io"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
