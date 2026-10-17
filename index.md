@@ -19,7 +19,7 @@ Senior Software Engineer | Java · Spring Boot · Microservices · Automation ·
 
 ## About Me
 
-I'm a software developer with approximately 6.5 years of industry experience and nearly 10 of hands-on coding experience. Java and Spring Boot are my primary strengths, particularly in backend development, REST APIs, microservices, automation, and production-oriented applications.
+I'm a software developer with approximately 6.5 years of industry experience and nearly 10 years of hands-on coding experience. Java and Spring Boot are my primary strengths, particularly in backend development, REST APIs, microservices, automation, and production-oriented applications.
 
 Beyond my professional work, I continuously build small projects to explore ideas, solve everyday engineering problems, and share practical implementations with other developers.
 
