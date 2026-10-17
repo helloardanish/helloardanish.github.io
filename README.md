@@ -1,174 +1,148 @@
-# just-the-docs-template
+# A R Danish: Portfolio
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+Personal portfolio and resume of **A R Danish**, Senior Software Engineer (Java · Spring Boot · Microservices), built with [Jekyll] and the [Just the Docs] theme and hosted on [GitHub Pages].
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+**Live site:** https://helloardanish.github.io
 
-More specifically, the created site:
+## What's on the site
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+| Page | File | Description |
+|:-----|:-----|:------------|
+| About Me | `index.md` | Introduction, strengths, engineering mindset, contact |
+| Resume | `resume.md` | Summary, skills, experience, certifications, education |
+| Projects | `projects/index.md` | Overview of open-source work |
+| ↳ Java & Spring Boot | `projects/java-spring-boot.md` | Browser Pilot, Task Scheduler, multi-module, SpineHR, Script Service |
+| ↳ Frontend | `projects/frontend.md` | ARENV, UI Task Scheduler, Babe Pass, browser extension |
+| ↳ Python & Desktop Automation | `projects/python-automation.md` | PyAutoGUI tools, Excel to SQL, encryption experiments |
+| ↳ Docker, Kubernetes & Cloud | `projects/devops-cloud.md` | Dev environment setups, Minikube, AWS EC2 |
+| ↳ Kafka & Event-Driven | `projects/kafka.md` | Spring Boot producer/consumer samples |
 
-To get started with creating a site, simply:
+## Repository structure
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+```
+.
+├── _config.yml              # Site title, theme, URL, header links, search, footer
+├── Gemfile                  # Jekyll + just-the-docs gem
+├── index.md                 # Home page
+├── resume.md                # Resume
+├── projects/
+│   ├── index.md             # Parent page (has_children: true)
+│   └── *.md                 # Child pages (parent: Projects)
+└── .github/workflows/
+    └── pages.yml            # Build & deploy to GitHub Pages
+```
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](#hosting-your-docs-from-an-existing-project-repo).
+## Run locally
 
-After completing the creation of your new site on GitHub, update it as needed:
+Requires [Ruby] and [Bundler].
 
-## Replace the content of the template pages
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-Update the following files to your own content:
+Open http://localhost:4000/. Page edits reload automatically with `--livereload`:
 
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
+```bash
+bundle exec jekyll serve --livereload
+```
 
-## Changing the version of the theme and/or Jekyll
+> **Note:** changes to `_config.yml` are **not** picked up automatically. Stop the server (`Ctrl+C`) and start it again.
 
-Simply edit the relevant line(s) in the `Gemfile`.
+The generated site is written to `_site/` (do not commit it).
 
-## Adding a plugin
+## Editing content
 
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
+### Update an existing page
+Edit the relevant `.md` file. The block between `---` lines at the top is *front matter*; keep it intact.
 
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+### Add a new project page
 
-- Add the following to your site's `Gemfile`:
+1. Create `projects/my-new-page.md`:
 
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
+   ```markdown
+   ---
+   title: My New Page
+   layout: default
+   parent: Projects
+   nav_order: 6
+   ---
 
-- And add the following to your site's `_config.yml`:
+   # My New Page
 
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
+   Content here.
+   ```
 
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+2. Optionally link it from `projects/index.md`:
 
-## Publishing your site on GitHub Pages
+   ```markdown
+   [My New Page]({% link projects/my-new-page.md %})
+   ```
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+### Add a new top-level page
 
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
+```markdown
+---
+title: Contact
+layout: default
+nav_order: 4
+---
+```
 
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+### Useful Just the Docs snippets
 
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
+```markdown
+{: .note }
+A callout box. Also available: `.warning`, `.important`, `.highlight`.
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+[Primary button](https://example.com){: .btn .btn-primary }
+```
 
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+See the [Just the Docs documentation][Just the Docs] for navigation, callouts, search, and color schemes.
 
-## Building and previewing your site locally
+## Configuration
 
-Assuming [Jekyll] and [Bundler] are installed on your computer:
+Key settings in `_config.yml`:
 
-1.  Change your working directory to the root directory of your site.
+| Key | Purpose |
+|:----|:--------|
+| `title`, `description` | Site name and SEO description |
+| `url` | `https://helloardanish.github.io` |
+| `baseurl` | Leave empty (`""`) for a user site |
+| `color_scheme` | `light` or `dark` |
+| `aux_links` | Top-right header links (GitHub, LinkedIn) |
+| `search_enabled` | Built-in search |
+| `footer_content` | Footer text |
 
-2.  Run `bundle install`.
+## Deployment (GitHub Pages)
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+1. Push the repository to GitHub as `helloardanish/helloardanish.github.io`.
+2. Go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
+3. Push to `main`. The workflow in `.github/workflows/pages.yml` builds and publishes the site.
+4. If a run failed, open the **Actions** tab and click **Re-run jobs**.
 
-    The built site is stored in the directory `_site`.
+Changes can take a few minutes to appear after publishing.
 
-## Publishing your built site on a different platform
+## Tech stack
 
-Just upload all the files in the directory `_site`.
+- [Jekyll] static site generator
+- [Just the Docs] theme (gem-based)
+- GitHub Actions + GitHub Pages
 
-## Customization
+## Contact
 
-You're free to customize sites that you create with this template, however you like!
+- GitHub: [@helloardanish](https://github.com/helloardanish)
+- LinkedIn: [linkedin.com/in/helloardanish](https://linkedin.com/in/helloardanish)
+- Email: [helloardanish@gmail.com](mailto:helloardanish@gmail.com)
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+## Licensing and attribution
 
-## Hosting your docs from an existing project repo
-
-You might want to maintain your docs in an existing project repo. Instead of creating a new repo using the [just-the-docs template](https://github.com/just-the-docs/just-the-docs-template), you can copy the template files into your existing repo and configure the template's Github Actions workflow to build from a `docs` directory. You can clone the template to your local machine or download the `.zip` file to access the files.
-
-### Copy the template files
-
-1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
-
-2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
-
-### Modify the GitHub Actions workflow
-
-The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
-
-1.  Set the default `working-directory` param for the build job.
-
-    ```yaml
-    build:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: docs
-    ```
-
-2.  Set the `working-directory` param for the Setup Ruby step.
-
-    ```yaml
-    - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-          cache-version: 0
-          working-directory: '${{ github.workspace }}/docs'
-    ```
-
-3.  Set the path param for the Upload artifact step:
-
-    ```yaml
-    - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/_site/
-    ```
-
-4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
-
-    ```yaml
-    on:
-      push:
-        branches:
-          - "main"
-        paths:
-          - "docs/**"
-    ```
-
-## Licensing and Attribution
-
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
-
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+Site structure is based on the [just-the-docs-template], licensed under the [MIT License]. Portfolio content (text, resume, project descriptions) © A R Danish, all rights reserved.
 
 [Jekyll]: https://jekyllrb.com
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[Ruby]: https://www.ruby-lang.org
 [Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
-[`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
-[`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
+[just-the-docs-template]: https://github.com/just-the-docs/just-the-docs-template
 [MIT License]: https://en.wikipedia.org/wiki/MIT_License
-[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
-[actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
