@@ -420,6 +420,43 @@ hide:
         <h3 class="proj-label">Personal projects</h3>
         <div class="proj-grid">
             <article class="proj">
+                <h4>InterviewKit</h4>
+                <div class="meta">Java interview knowledge base, published as a website</div>
+                <p>
+                    A curated, pattern-organized collection of Java solutions with intuition and complexity analysis:
+                    LeetCode 150 by pattern (arrays, two pointers, sliding window, trees, graphs), design patterns in
+                    idiomatic Java, data structures from scratch, and real company interview questions tagged by company
+                    and role.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java</span><span class="chip tech">DSA</span
+                    ><span class="chip tech">Design Patterns</span><span class="chip tech">LeetCode</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://helloardanish.github.io/InterviewKit/"          target="_blank" rel="noopener">Live site</a>
+                    <a href="https://github.com/helloardanish/InterviewKit" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Tech Interview Handbook</h4>
+                <div class="meta">Backend interview Q&amp;A site</div>
+                <p>
+                    Questions and answers across core and modern Java (8 to 25), Spring Framework and Boot, SQL, JPA and
+                    Hibernate, microservices, design patterns and LLD, system design, DevOps and cloud, coding problems
+                    and scenario-based questions. Built with Jekyll and Just the Docs, with reusable templates for adding
+                    new content.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">System Design</span><span class="chip tech">Jekyll</span
+                    ><span class="chip tech">Just the Docs</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://achhecode.github.io/tech-interview-handbook" target="_blank" rel="noopener">Live site</a>
+                    <a href="https://github.com/achhecode/tech-interview-handbook" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
                 <h4>SECURA</h4>
                 <div class="meta">Secure message, file and folder encryption</div>
                 <p>
@@ -432,42 +469,224 @@ hide:
                     ><span class="chip tech">Thymeleaf</span><span class="chip tech">PGPainless</span
                     ><span class="chip tech">Maven</span>
                 </div>
+                <div class="proj-links">
+                    <a href="REPLACE_WITH_SECURA_REPO_URL" target="_blank" rel="noopener">GitHub</a>
+                </div>
             </article>
             <article class="proj">
-                <h4>This portfolio</h4>
-                <div class="meta">helloardanish.github.io</div>
+                <h4>Browser Pilot</h4>
+                <div class="meta">Browser and keyboard automation framework</div>
                 <p>
-                    A one-page portfolio generated from my resume with Zensical, with a skills matrix, experience
-                    timeline, certification library and a contact form that opens in the visitor's mail app.
+                    A reusable automation framework with browser management, page-resolution components and native
+                    keyboard and mouse control. Includes rule-based handling of job-application questionnaires, a task
+                    scheduler, persistence, API docs and Actuator monitoring.
                 </p>
                 <div class="stack">
-                    <span class="chip tech">Zensical</span><span class="chip tech">Markdown</span
-                    ><span class="chip tech">HTML/CSS</span><span class="chip tech">JavaScript</span
-                    ><span class="chip tech">GitHub Pages</span>
+                    <span class="chip tech">Java 25</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Playwright</span><span class="chip tech">JNA</span
+                    ><span class="chip tech">Spring Data JPA</span><span class="chip tech">H2</span
+                    ><span class="chip tech">OpenAPI</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/achhecode/browser-pilot" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Task Scheduler</h4>
+                <div class="meta">Persistent task scheduling service</div>
+                <p>
+                    Schedules operations for future execution, inspired by banking jobs such as reconciliation and
+                    reports. Pending tasks are persisted and recovered after restarts, with status tracking and
+                    cancellation. Secured with JWT, refresh tokens and role-based access, plus validation, centralized
+                    exception handling and rolling file logs.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java 25</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Quartz</span><span class="chip tech">JWT</span
+                    ><span class="chip tech">Spring Data JPA</span><span class="chip tech">H2</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/task-scheduler" target="_blank" rel="noopener">Backend</a>
+                    <a href="https://github.com/helloardanish/ui-task-scheduler" target="_blank" rel="noopener">Angular UI</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Script Service</h4>
+                <div class="meta">Executable script runner for production support</div>
+                <p>
+                    Exposes local and server-side script execution as a service, replacing manual command-line work in
+                    production-support and issue-resolution workflows.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java 21</span><span class="chip tech">Spring Boot</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/script-service" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Multi-module Spring Boot</h4>
+                <div class="meta">Shared contracts across services</div>
+                <p>
+                    A multi-module layout that shares models, entities and DTOs across services, keeping boundaries
+                    between shared contracts and service-specific logic clear and reducing duplication.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java 21</span><span class="chip tech">Spring Boot 3.4</span
+                    ><span class="chip tech">GraphQL</span><span class="chip tech">Maven</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/spring-boot-multi-module-main" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Kafka producer and consumer</h4>
+                <div class="meta">Event-driven messaging samples</div>
+                <p>
+                    Spring Boot producer and consumer services exploring asynchronous, message-driven communication on
+                    Apache Kafka, with a reproducible local Docker setup.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java 21</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Kafka</span><span class="chip tech">Docker</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/kafka-producer-consumer-service" target="_blank" rel="noopener">Service</a>
+                    <a href="https://github.com/helloardanish/kafka-producer-consumer" target="_blank" rel="noopener">Docker setup</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Containerized dev environments</h4>
+                <div class="meta">Docker, Kubernetes and AWS EC2 setups</div>
+                <p>
+                    Reproducible setups for Angular, Spring Boot with Maven, MongoDB with Mongo Express and Python, using
+                    volume mounts so code changes reflect live without local toolchains. Also covers Minikube basics and
+                    an EC2 access guide.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Docker Compose</span><span class="chip tech">Kubernetes</span
+                    ><span class="chip tech">Minikube</span><span class="chip tech">AWS EC2</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/docker-spring-boot-maven-setup" target="_blank" rel="noopener">Spring Boot</a>
+                    <a href="https://github.com/helloardanish/docker-angular-setup" target="_blank" rel="noopener">Angular</a>
+                    <a href="https://github.com/helloardanish/kubernetes-setup" target="_blank" rel="noopener">Kubernetes</a>
+                    <a href="https://github.com/helloardanish/AWS-EC2-Connection" target="_blank" rel="noopener">EC2</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>Excel to SQL generator</h4>
+                <div class="meta">Desktop data utility</div>
+                <p>
+                    A desktop app to open, edit and export Excel data and generate SQL INSERT statements from rows, built
+                    to speed up data preparation for production fixes.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Python</span><span class="chip tech">pandas</span
+                    ><span class="chip tech">PyQt6</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/A-R-Excel-Query" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="proj">
+                <h4>SpineHR attendance automation</h4>
+                <div class="meta">One-click IN/OUT marking</div>
+                <p>
+                    A small utility that logs in to an HR portal and marks attendance, removing a repetitive manual step
+                    with Selenium-driven browser automation.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java 21</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Selenium</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/helloardanish/spinehr" target="_blank" rel="noopener">GitHub</a>
                 </div>
             </article>
         </div>
         <h3 class="proj-label">Work and client projects</h3>
         <div class="proj-grid">
             <article class="proj client">
-                <h4>Core banking APIs, Al Rajhi Bank</h4>
-                <div class="meta">Newgen Software · 2022 – 2024</div>
+                <h4>Benefit Plan Library platform</h4>
+                <div class="meta">Feuji · Onsite Costa Rica · 2025</div>
                 <p>
-                    Led REST API design and integration for four banking products (POS, BIF, ECOM, FLEET), connecting
-                    banking apps, internal systems and third parties for high-volume transactions.
+                    Built the plan and carrier microservices of an HR benefits platform covering medical, dental, life and
+                    disability plans. The plan service manages plan year, quarter, effective dates, exchange (three exchange
+                    tiers), risk-sharing and regional eligibility. It exposes lookups for base plans by carrier and industry,
+                    exchange plan data and regional plans, and runs a validate-then-publish workflow (publish and
+                    publish-with-sync modes) that writes publish history and an audit trail of plan and region changes. The
+                    carrier service handles region mapping, benefit-type and industry associations, rate regions and carrier
+                    audit details. Delivered with REST APIs, Playwright end-to-end tests and Harness CI/CD on AWS.
                 </p>
                 <div class="stack">
                     <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
-                    ><span class="chip tech">Jersey</span><span class="chip tech">Newgen OmniApp</span
-                    ><span class="chip tech">MySQL</span>
+                    ><span class="chip tech">Microservices</span><span class="chip tech">AWS</span
+                    ><span class="chip tech">DynamoDB</span><span class="chip tech">MongoDB</span
+                    ><span class="chip tech">Angular</span><span class="chip tech">Playwright</span
+                    ><span class="chip tech">Harness</span>
                 </div>
             </article>
             <article class="proj client">
-                <h4>Telecom pricing platform, Reliance Jio</h4>
-                <div class="meta">Tata Consultancy Services · 2021 – 2022</div>
+                <h4>Non-social media crawler pipeline</h4>
+                <div class="meta">Germin8 · 2024 – 2025</div>
                 <p>
-                    Led the move from a legacy monolith to Spring Boot microservices for international pricing and
-                    rating, with phased rollouts and zero pricing-data loss during migration.
+                    Owned a content-ingestion pipeline from scratch to production for blogs, forums, news, Reddit, Tumblr and
+                    YouTube. A crawler service polls the data provider every 15 seconds using configured search queries and
+                    publishes to Kafka; a fetcher job and content dumper persist raw content to HDFS. Downstream services run
+                    relevance filtering, listening sentiment and a transporter that moves enriched records to the indexed
+                    store, so results surface in the listening UI. Built as event-driven microservices with Kafka topics
+                    between stages for fault tolerance and replay.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Kafka</span><span class="chip tech">HDFS</span
+                    ><span class="chip tech">Solr</span><span class="chip tech">GCP</span>
+                </div>
+            </article>
+            <article class="proj client">
+                <h4>Social listening web app</h4>
+                <div class="meta">Germin8 · 2024 – 2025</div>
+                <p>
+                    Front-end for the social listening product, built as a modular Angular app: feature modules,
+                    environment-based configuration, reusable components, reactive forms and NgRx for state management,
+                    integrated with the backend microservice APIs.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Angular</span><span class="chip tech">NgRx</span
+                    ><span class="chip tech">RxJS</span><span class="chip tech">Reactive Forms</span>
+                </div>
+            </article>
+            <article class="proj client">
+                <h4>Digital lending products, Al Rajhi Bank</h4>
+                <div class="meta">Newgen Software · 2022 – 2024</div>
+                <p>
+                    Shipped four financing products (POS, BIF, ECOM, FLEET) end to end for one of the world's largest Islamic
+                    banks. Implemented the application-lifecycle APIs: preliminary check, product eligibility, dossier
+                    creation, customer data, installment request, mandatory and attached document handling, customer
+                    acceptance, final agreements, promissory-note create/update, tracking and final delivery. Built generic
+                    call-create, insert, select, update, delete and stored-procedure wrapper services, per-product property
+                    configuration, and socket connectors with XML and JSON responses. Added authentication and authorization,
+                    commodity and contract services, logging, and English/Arabic UTF-8 handling. Integrated with partner
+                    systems and the workflow platform, and handled production fixes with ordered, executable SQL scripts.
+                </p>
+                <div class="stack">
+                    <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">Jersey</span><span class="chip tech">REST / SOAP</span
+                    ><span class="chip tech">Newgen OmniApp</span><span class="chip tech">MySQL</span
+                    ><span class="chip tech">SQL Server</span>
+                </div>
+            </article>
+            <article class="proj client">
+                <h4>Telecom customer-care portal migration</h4>
+                <div class="meta">Tata Consultancy Services · Vi · 2021 – 2022</div>
+                <p>
+                    Migrated a legacy EJB monolith to Spring Boot microservices with an AngularJS front end. Delivered three
+                    services: a network tracker (search by state, pincode, city and area, returning cell-site ID, coverage and
+                    planned status, availability, downtime and congestion hours), a store locator on the same search model,
+                    and a post-to-prepaid outstanding calculator. The calculator computes prorated rental, unbilled and billed
+                    outstanding, GST split, plan exit fees and deposit adjustments into a final payable amount. Ran phased
+                    rollouts with backward-compatible APIs.
                 </p>
                 <div class="stack">
                     <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
@@ -476,29 +695,34 @@ hide:
                 </div>
             </article>
             <article class="proj client">
-                <h4>HRMS microservices</h4>
-                <div class="meta">Feuji · 2025</div>
+                <h4>International roaming pack platform</h4>
+                <div class="meta">Tata Consultancy Services · Vi · 2021 – 2022</div>
                 <p>
-                    Microservices for employee onboarding, wellness tracking and benefits management on AWS, with
-                    Playwright end-to-end tests and Harness CI/CD pipelines.
+                    Built the roaming journey end to end: destination search and multi-country selection (primary plus
+                    additional countries), duration choice (1 to 28 days), and a pack-details service returning rental,
+                    per-country validity, data allowance with post-quota rates, call and SMS rules, supported countries and
+                    activation channels (app, web, bot). Spring Boot REST services with an AngularJS front end, shipped after
+                    requirement workshops with business stakeholders.
                 </p>
                 <div class="stack">
                     <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
-                    ><span class="chip tech">AWS</span><span class="chip tech">DynamoDB</span
-                    ><span class="chip tech">Angular</span><span class="chip tech">Harness</span>
+                    ><span class="chip tech">REST</span><span class="chip tech">AngularJS</span
+                    ><span class="chip tech">MySQL</span>
                 </div>
             </article>
             <article class="proj client">
-                <h4>Real-time streaming and GenAI features</h4>
-                <div class="meta">Germin8 · 2024 – 2025</div>
+                <h4>E-commerce platform for a client</h4>
+                <div class="meta">CloudNext Services · 2019 – 2021</div>
                 <p>
-                    Fault-tolerant Kafka pipelines on GCP plus OpenAI-powered sentiment analysis, auto-reply and
-                    auto-completion across Java and Python services.
+                    Developed and maintained a client e-commerce site with a Spring Boot backend and a Bootstrap front end. Services covered
+                    product details, add to cart, cart details, order creation and place order, with Razorpay payment
+                    integration for checkout. Front end used HTML, CSS, Bootstrap and JavaScript handlers calling the REST
+                    APIs.
                 </p>
                 <div class="stack">
-                    <span class="chip tech">Kafka</span><span class="chip tech">RabbitMQ</span
-                    ><span class="chip tech">GCP</span><span class="chip tech">Solr</span
-                    ><span class="chip tech">OpenAI APIs</span><span class="chip tech">React</span>
+                    <span class="chip tech">Java</span><span class="chip tech">Spring Boot</span
+                    ><span class="chip tech">REST</span><span class="chip tech">Razorpay</span
+                    ><span class="chip tech">Bootstrap</span><span class="chip tech">JavaScript</span>
                 </div>
             </article>
         </div>

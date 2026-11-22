@@ -210,3 +210,8 @@ section.pf:nth-of-type(even) .proj { background: var(--paper); }
   .badge i { animation: none; }
   .bar i, .btn, .soc { transition: none; }
 }
+
+
+.proj-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 12px; font-size: 0.85rem; }
+.proj-links a { text-decoration: none; font-weight: 600; }
+.proj-links a:hover { text-decoration: underline; }
